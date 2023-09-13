@@ -9,13 +9,13 @@ import struct
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
 
-    server="kl-sqlserver.database.windows.net"
-    database="test"
+    server="msiserver.database.windows.net"
+    database="msiDatabase"
     driver="{ODBC Driver 17 for SQL Server}"
     query="SELECT * FROM dbo.users"
     # username = 'name' 
     # password = 'pass'
-    db_token = ''
+    # db_token = ''
     connection_string = 'DRIVER='+driver+';SERVER='+server+';DATABASE='+database
 
     if os.getenv("MSI_SECRET"):
